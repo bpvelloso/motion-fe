@@ -19,6 +19,6 @@ Frontend para consulta de arquivos gerados por detecção de movimento
 ## TODO
 - [ ] Filtrar eventos por data
 - [ ] Carregar imagens em cache
-- [ ] Compartilhar vídeo
+- [ ] Compartilhar vídeo]
 
 
