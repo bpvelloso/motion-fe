@@ -17,7 +17,7 @@ Frontend para consulta de arquivos gerados por detecção de movimento
    - ``` bash$ http-server ```
 
 ## TODO
-- [ ] Filtrar eventos por data
+- [X] Filtrar eventos por data
 - [ ] Carregar imagens em cache
 - [ ] Compartilhar vídeo]
 
