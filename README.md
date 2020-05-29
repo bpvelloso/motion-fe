@@ -22,12 +22,17 @@ Frontend para consulta de arquivos gerados por detecção de movimento
 2. NÃO incluir as pastas motion-images nem conf
 3. Criar um link simbólico chamado motion-images para a pasta onde o motion salva as imagens
 4. Verificar se o arquivo /etc/init.d/motion exite e se inclui as linhas do http-server conforme o arquivo conf/motion.init.d
+5. Copiar o arquivo conf/rotate-files.sh para /usr/local/bin e incluir a seguinte linha no CRON($ sudo contab -e)
+   - ```*/30 * * * * /usr/local/bin/rotate-files.sh /home/bpvelloso/motion-images```
 
 ## TODO
 - [X] Filtrar eventos por data
+- [ ] Mover o slider quando utilizar a navegação pelas setas sobre as imagens
+- [ ] Mostrar loading
+- [ ] Alterar dias pelas setas laterais do input
 - [ ] Carregar imagens em cache
 - [ ] Compartilhar vídeo
 - [X] Configuração de daemons
-- [ ] Integração local no http-server
+- [ ] Integração local no http-server(Verificar???)
 
 
