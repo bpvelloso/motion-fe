@@ -11,8 +11,18 @@ Frontend para consulta de arquivos gerados por detecção de movimento
 
 1. Instale e configure o Motion
    - A pasta onde o motion deve salvar as imagens deve ser a pasta *motion-images* 
+   - O nome das imagens e vídeos deve seguir o padrão *%Y%m%d-%v*
+      - No arquivo motion.conf modificar as linhas:
+      ``` 
+      target_dir /path/to/dir/motion-images
+      picture_filename %Y%m%d-%v
+      picture_output best
+      movie_filename %Y%m%d-%v
+      ```
 2. Instale o http-server
    - ``` bash$ npm install -g http-server ```
+   - Criar os servificados para uso de https se for o caso
+      - ``` bash$ openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem ```
 3. Na raiz deste projeto execute o servidor
    - ``` bash$ http-server ```
 
@@ -27,12 +37,12 @@ Frontend para consulta de arquivos gerados por detecção de movimento
 
 ## TODO
 - [X] Filtrar eventos por data
-- [ ] Mover o slider quando utilizar a navegação pelas setas sobre as imagens
-- [ ] Mostrar loading
-- [ ] Alterar dias pelas setas laterais do input
-- [ ] Carregar imagens em cache
-- [ ] Compartilhar vídeo
+- [X] Mover o slider quando utilizar a navegação pelas setas sobre as imagens
+- [X] Mostrar loading
+- [X] Alterar dias pelas setas laterais do input
+- [X] Carregar imagens em cache
+- [ ] Modificar o Baixar para Compartilhar vídeo direto
 - [X] Configuração de daemons
-- [ ] Integração local no http-server(Verificar???)
+
 
 

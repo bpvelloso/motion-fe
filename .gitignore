@@ -1,3 +1,5 @@
 motion-images
 motion-images/
 motion-images/*
+cert.pem
+key.pem

@@ -63,7 +63,8 @@ case "$1" in
         fi
         log_daemon_msg "Starting $DESC" "$NAME"
         ##Inicia o http-server na pasta de deploy
-        http-server /home/bpvelloso/motion -p 800 &
+        cd /home/bpvelloso/motion
+        http-server /home/bpvelloso/motion -p 800 -S -C /home/bpvelloso/motion/cert.pem &
         if start-stop-daemon --start --oknodo --exec $DAEMON -b --chuid motion ; then
             log_end_msg 0
         else

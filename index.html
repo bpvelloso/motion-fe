@@ -50,14 +50,14 @@
 
 
                 <div class="input-group mb-3">
-                    <div class="input-group-prepend">
+                    <div id="prev-day" class="input-group-prepend">
                         <div class="input-group-text"> < </div>
                     </div>
             
                     <input type="date" class="form-control" 
                        id="data" onchange="filtraPorData(this.value)" />
 
-                    <div class="input-group-append">
+                    <div id="next-day" class="input-group-append">
                         <div class="input-group-text"> > </div>
                     </div>
                 </div>
@@ -85,10 +85,16 @@
             </video>
             </div>
             <div class="modal-footer">
+            <button id="share" type="button" class="btn btn-secondary" >Baixar</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             </div>
         </div>
         </div>
+    </div>
+
+    <!-- Loading screen -->
+    <div id="carregando" class="collapse">
+        <h1>Carregando...</h1>
     </div>
 
     <script src="inc/jquery-3.5.1.min.js"></script>
