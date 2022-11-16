@@ -21,7 +21,7 @@ Frontend para consulta de arquivos gerados por detecção de movimento
       ```
 2. Instale o http-server
    - ``` bash$ npm install -g http-server ```
-   - Criar os servificados para uso de https se for o caso
+   - Criar os certificados para uso de https se for o caso
       - ``` bash$ openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem ```
 3. Na raiz deste projeto execute o servidor
    - ``` bash$ http-server ```
